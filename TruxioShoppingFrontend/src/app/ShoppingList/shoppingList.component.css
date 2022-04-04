@@ -1,0 +1,47 @@
+.listFields {
+    display: flex;
+}
+
+.addButton {
+    background-color: #004C7F;
+    color: white;
+    margin: 6px 6px 6px 20px;
+    height: 40px;
+}
+
+.removeButton {
+    background-color: #b71c1c;
+    color: white;
+    margin: 6px 6px 6px 20px;
+    height: 40px;
+}
+
+.itemList table {
+    width: 100%;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+
+.itemList .editItemButton {
+    background-color: #004C7F;
+    color: white;   
+    height: 40px;
+    margin-right: 20px;
+}
+
+.itemList .deleteItemButton {
+    background-color: #b71c1c;
+    color: white;   
+    height: 40px;
+}
+
+.itemList .addItemButton {
+    background-color: #004C7F;
+    color: white;   
+    margin: 10px auto;
+    display: block;
+}
+
+.itemList .addItemButton:disabled{
+    background-color: grey;
+    opacity: 0.26;
+}

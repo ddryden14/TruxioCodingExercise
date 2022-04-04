@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruxioShopping", "TruxioShopping\TruxioShopping.csproj", "{11C643EC-2EA5-4957-8064-1DD28CC4AEB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11C643EC-2EA5-4957-8064-1DD28CC4AEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C643EC-2EA5-4957-8064-1DD28CC4AEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C643EC-2EA5-4957-8064-1DD28CC4AEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C643EC-2EA5-4957-8064-1DD28CC4AEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D70B227-FF29-4A84-9D8C-4E44461108C1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,56 @@
+<div>
+    <div class="listFields">
+        <mat-form-field appearance="fill">
+            <mat-label>Lists</mat-label>
+            <mat-select [(value)]="selectedList" (selectionChange)="onSelectedListChange()">
+              <mat-option *ngFor="let list of lists" [value]="list.id">
+                {{list.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        <button mat-raised-button class="addButton" (click)="onAddListClick()">Add List</button>
+        <button mat-raised-button class="addButton" (click)="onEditListClick()" [disabled]="selectedList === 0">Edit List</button>
+        <button mat-raised-button class="removeButton" (click)="onDeleteListClick()" [disabled]="selectedList === 0">Delete List</button>
+    </div>
+
+    <div class="itemList">
+        <table mat-table [dataSource]="items">
+            <ng-container matColumnDef="item">
+                <th mat-header-cell *matHeaderCellDef>Item</th>
+                <td mat-cell *matCellDef="let item"> {{item.name}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="quantity">
+                <th mat-header-cell *matHeaderCellDef>Quantity</th>
+                <td mat-cell *matCellDef="let item"> {{item.quantity}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="link">
+                <th mat-header-cell *matHeaderCellDef>Link</th>
+                <td mat-cell *matCellDef="let item"> 
+                    <a href="{{item.link}}">{{item.link}}</a>
+                </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>Actions</th>
+                <td mat-cell *matCellDef="let item"> 
+                    <button mat-raised-button class="editItemButton" (click)="onEditItemClick(item)" title="Edit">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-raised-button class="deleteItemButton" (click)="onDeleteItemClick(item.id, item.name)" title="Delete">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <button mat-mini-fab class="addItemButton" (click)="onAddItemClick()" [disabled]="selectedList === 0">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+</div>
